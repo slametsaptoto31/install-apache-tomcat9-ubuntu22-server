@@ -27,3 +27,31 @@
    <role rolename="manager-gui"/>
    <user username="admin" password="rsgmpamc2023" roles="admin-gui,manager-gui"/>
 ```
+
+6. #### Setting upload max file size .war
+```sh
+   nano /usr/share/tomcat9-admin/manager/WEB-INF/web.xml
+```
+
+7. #### Ubah setting upload max file size, contoh max 200 mb
+```sh
+   <multipart-config>
+      <!-- 50MB max -->
+      <max-file-size>252428800</max-file-size>
+      <max-request-size>252428800</max-request-size>
+      <file-size-threshold>0</file-size-threshold>
+  </multipart-config>
+```
+
+8. #### Restart service tomcat9
+```sh
+   systemctl restart tomcat9
+```
+
+9. #### Akses uji coba alamat web tomcat ke http://ipaddress:8080
+
+10. #### Optional, setting besaran ram untuk alokasi java tomcat
+```sh
+   
+```
+
