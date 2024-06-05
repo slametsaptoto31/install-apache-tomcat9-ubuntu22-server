@@ -52,6 +52,7 @@
 
 10. #### Optional, setting besaran ram untuk alokasi java tomcat
 ```sh
-   
+   nano /etc/default/tomcat9
+   edit bagian : JAVA_OPTS="-Djava.awt.headless=true -XX:+UseConcMarkSweepGC -Xms16000m -Xmx16000m -XX:NewRatio=3 -XX:SurvivorRatio=6 -XX:PermSize=4000m -XX:MaxPermSize=5333m -Xmn5333m"
 ```
 
